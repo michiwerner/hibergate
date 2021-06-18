@@ -1,15 +1,5 @@
 # hibergate
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
-
-Now that you have been warned...
-
 The main use case for this tool is to allow TCP services to scale to zero when idling. Just as an example, imagine the
 following scenario: You have a kubernetes cluster running in one of the major clouds. You have cluster auto-scaling all
 set up so that kubernetes nodes are automatically added to or removed from your cluster based on the running pods'
@@ -32,3 +22,17 @@ limited to certain use cases. This bugged me especially because it seemed so sim
 service is idle, and then running some command(s) to stop and launch the service accordingly.
 
 The actual documentation for this project will follow soon. Stay tuned. :)
+
+Copyright 2020 Michael Werner
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use these files except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
