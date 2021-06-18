@@ -15,7 +15,7 @@ type Config struct {
 
 func NewConfig() *Config {
 	c := new(Config)
-	err := envconfig.Process("SOCKLAUNCHD", c)
+	err := envconfig.Process("HIBERGATE", c)
 	if err != nil {
 		panic("Error processing env variables: " + err.Error())
 	}

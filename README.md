@@ -1,4 +1,4 @@
-# socklaunchd
+# hibergate
 
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
 IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
@@ -27,7 +27,7 @@ and specifically the OpenResty project https://openresty.org/en/
 * systemd socket-based activation - https://www.freedesktop.org/software/systemd/man/systemd.socket.html
 * the diverse inetd flavours
 
-The reason why I still wrote socklaunchd is that all of the existing solutions I had tried were quite complex and/or
+The reason why I still wrote hibergate is that all of the existing solutions I had tried were quite complex and/or
 limited to certain use cases. This bugged me especially because it seemed so simple to just determine when some TCP
 service is idle, and then running some command(s) to stop and launch the service accordingly.
 
