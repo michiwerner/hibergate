@@ -1,4 +1,4 @@
-module github.com/michiwerner/socklaunchd
+module github.com/michiwerner/hibergate
 
 go 1.13
 
