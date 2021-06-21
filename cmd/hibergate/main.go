@@ -18,12 +18,14 @@ package main
 
 import (
 	"time"
+
+	"github.com/michiwerner/hibergate/internal/app/hibergate"
 )
 
 func main() {
-	config := NewConfig()
-	service := NewService(config)
-	proxy := NewProxy(service)
+	config := hibergate.NewConfig()
+	service := hibergate.NewService(config)
+	proxy := hibergate.NewProxy(service)
 	go func() {
 		for {
 			service.UpdateState()
