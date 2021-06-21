@@ -40,7 +40,7 @@ func NewService(c *Config) *Service {
 func (s *Service) UpdateIdleState() {
 	s.Lock()
 	defer s.Unlock()
-	if s.State == "READY" && s.ActiveConnections < 1 && !s.LastConnectionClosed.IsZero() && int(time.Now().Sub(s.LastConnectionClosed).Seconds()) >= s.Config.IdleSecs {
+	if s.State == "READY" && s.ActiveConnections < 1 && !s.LastConnectionClosed.IsZero() && int(time.Since(s.LastConnectionClosed).Seconds()) >= s.Config.IdleSecs {
 		s.State = "IDLE"
 	}
 }
