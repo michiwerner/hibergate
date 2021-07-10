@@ -15,5 +15,5 @@ jobs:
       - name: Run unit tests
         working-directory: ./cmd/hibergate
         run: |
-          export PATH="$PATH:/usr/local/go/bin"
+          export PATH="/usr/local/go/bin:$PATH"
           go test
