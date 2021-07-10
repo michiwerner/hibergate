@@ -1,16 +1,14 @@
 name: Main Workflow
-
-on: [push]
-
+on:
+  - push
 jobs:
-  test:
-    name: Test
-    runs-on: ubuntu-latest
+  build:
+    name: Build Binary
+    runs-on: ubuntu-20.04
     steps:
       - name: Checkout
         uses: actions/checkout@v2
-      - name: Setup Minikube
-        uses: manusa/actions-setup-minikube@v2.4.2
-        with:
-          minikube version: "v1.16.0"
-          kubernetes version: "v1.19.2"
+      - name: Install Go 1.16.5
+        run: |
+          /usr/bin/wget -O /tmp/go1.16.5.linux-amd64.tar.gz https://golang.org/dl/go1.16.5.linux-amd64.tar.gz
+          rm -rf /usr/local/go && tar -C /usr/local -xzf /tmp/go1.16.5.linux-amd64.tar.gz
