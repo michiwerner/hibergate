@@ -10,5 +10,5 @@ jobs:
         uses: actions/checkout@v2
       - name: Install Go 1.16.5
         run: |
-          /usr/bin/wget -O /tmp/go1.16.5.linux-amd64.tar.gz https://golang.org/dl/go1.16.5.linux-amd64.tar.gz
+          /usr/bin/wget -nv -O /tmp/go1.16.5.linux-amd64.tar.gz https://golang.org/dl/go1.16.5.linux-amd64.tar.gz
           sudo rm -rf /usr/local/go && sudo tar -C /usr/local -xzf /tmp/go1.16.5.linux-amd64.tar.gz
